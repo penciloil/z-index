@@ -1,0 +1,45 @@
+* ,*::after, *::before {
+    box-sizing: border-box;
+}
+
+.container { 
+    padding: 1rem;
+}
+
+.parent {
+    /* position: relative;
+    z-index: 5; */
+}
+
+/* z-index 賦予的數字越大，圖片會在越上方 */
+/* 還要注意PARENT的z-index 可能會影響到順序 */
+
+.content {
+    background: white;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    box-shadow: 0 0 25px green;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 50px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.dog-top, .dog-bottom {
+    height: 250px;
+    width: 250px;
+    background-image: url(overload.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 7;
+}
+
+.dog-top {
+    margin-bottom: -100px;
+}
+
+.dog-bottom {
+    margin-top: -100px;
+    transform: rotate(180deg);
+}
